@@ -7,7 +7,8 @@ import java.time.temporal.ChronoUnit;
 import org.example.ValidacaoException;
 import org.example.model.Funcionario;
 
-public class ValidacaoPeriodicidade {
+public class ValidacaoPeriodicidade implements ValidacaoReajuste {
+    @Override
     public void validar(Funcionario funcionario, BigDecimal aumento) {
 		LocalDate dataUltimoReajuste = funcionario.getDataUltimoReajuste();
 		LocalDate dataAtual = LocalDate.now();

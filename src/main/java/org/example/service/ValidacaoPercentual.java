@@ -6,8 +6,9 @@ import java.math.RoundingMode;
 import org.example.ValidacaoException;
 import org.example.model.Funcionario;
 
-public class ValidacaoPercentual {
+public class ValidacaoPercentual implements ValidacaoReajuste{
 
+   @Override
     public void validar(Funcionario funcionario, BigDecimal aumento) {
         BigDecimal salario = funcionario.getSalario();
 		BigDecimal percentualReajuste = aumento.divide(salario, RoundingMode.HALF_UP);
