@@ -1,4 +1,4 @@
-# solid-java
+# SOLID
 
 Princípios de orientação a objetos
 - Coesão
